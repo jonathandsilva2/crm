@@ -1,22 +1,90 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 
+import Header from '../organisms/Header';
 import Main from '../organisms/Main';
-import Sidebar from '../organisms/Sidebar';
+import FilterBar from '../organisms/FiltersBar';
 
 const DashboardMain = styled.div`
   display: flex;
+  flex-direction: column;
   background-color: red;
   min-height: 400px;
 `;
 
 export default function Dashboard() {
-  const [theme, setTheme] = useState('theme1');
+  const [users, setUsers] = useState([
+    {
+      id: 1,
+      name: 'Jonathan',
+      email: 'jonathand_silva@hotmail.com',
+      title: 'Senior Designer',
+    },
+    {
+      id: 1,
+      name: 'Jonathan',
+      email: 'jonathand_silva@hotmail.com',
+      title: 'Senior Designer',
+    },
+    {
+      id: 1,
+      name: 'Jonathan',
+      email: 'jonathand_silva@hotmail.com',
+      title: 'Senior Designer',
+    },
+    {
+      id: 1,
+      name: 'Jonathan',
+      email: 'jonathand_silva@hotmail.com',
+      title: 'Senior Designer',
+    },
+    {
+      id: 1,
+      name: 'Jonathan',
+      email: 'jonathand_silva@hotmail.com',
+      title: 'Senior Designer',
+    },
+    {
+      id: 1,
+      name: 'Jonathan',
+      email: 'jonathand_silva@hotmail.com',
+      title: 'Senior Designer',
+    },
+    {
+      id: 1,
+      name: 'Jonathan',
+      email: 'jonathand_silva@hotmail.com',
+      title: 'Senior Designer',
+    },
+    {
+      id: 1,
+      name: 'Jonathan',
+      email: 'jonathand_silva@hotmail.com',
+      title: 'Senior Designer',
+    },
+    {
+      id: 1,
+      name: 'Jonathan',
+      email: 'jonathand_silva@hotmail.com',
+      title: 'Senior Designer',
+    },
+    {
+      id: 1,
+      name: 'Jonathan',
+      email: 'jonathand_silva@hotmail.com',
+      title: 'Senior Designer',
+    },
+  ]);
+  const [displayedUser, setDisplayedUser] = useState('');
 
+  const displayUser = () => {};
+
+  const useEffect = (() => {}, [users]);
   return (
     <DashboardMain>
-      <Sidebar />
-      <Main />
+      <Header />
+      <FilterBar />
+      <Main users={users} />
     </DashboardMain>
   );
 }

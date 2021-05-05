@@ -1,10 +1,12 @@
 import styled from 'styled-components';
-import UserCard from '../molecules/UserCard';
+import UserList from '../molecules/UserList';
 
-export default function Main() {
+const MainContainer = styled.div``;
+
+export default function Main(props) {
   return (
-    <div>
-      <UserCard />
-    </div>
+    <MainContainer>
+      <UserList users={props.users} />
+    </MainContainer>
   );
 }

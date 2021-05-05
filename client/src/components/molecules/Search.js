@@ -1,20 +1,23 @@
 import styled from 'styled-components';
 
-const SearchInput = styled.input`
-  font-size: 14px;
-  padding: 10px;
-  background: papayawhip;
-  border: none;
-  border-radius: 13px;
-  ::placeholder {
-    color: red;
+import { Button, Input } from '../atoms/BasicElements';
+
+const SearchBar = styled.div`
+  background-color: orange;
+  padding: em;
+  display: flex;
+  border-radius: 4px;
+  input[type='text'] {
+    padding: 1em;
+    width: 100%;
   }
 `;
 
-export default function Search() {
+export default function Search(props) {
   return (
-    <div>
-      <SearchInput type="text" placeholder="Search for users" />
-    </div>
+    <SearchBar>
+      <Input theme={props.theme} type="text" placeholder="Search for users" />
+      <Button theme={props.theme}>Submit</Button>
+    </SearchBar>
   );
 }
